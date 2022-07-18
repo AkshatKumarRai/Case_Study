@@ -26,7 +26,7 @@ public class PaymentServiceImpl implements PaymentService{
     	
 		payment.setTxId(UUID.randomUUID().toString());
 		payment.setPayment_type("paid");
-		payment.setPaymentDate(LocalDate.now());
+		//payment.setPaymentDate(LocalDate.now());
 		return repository.save(payment); 
 	}
     
@@ -35,7 +35,7 @@ public class PaymentServiceImpl implements PaymentService{
     public Payment refund(Payment payment) throws TransactionIDAlreadyExistsException{
 		payment.setTxId(UUID.randomUUID().toString());
 		payment.setPayment_type("refund");
-		payment.setPaymentDate(LocalDate.now());
+		//payment.setPaymentDate(LocalDate.now());
 		return repository.save(payment); 
 	}
 
